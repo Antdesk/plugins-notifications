@@ -1,0 +1,12 @@
+en:
+  notifications:
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+  errors:
+    messages:
+      not_found: "not found"
