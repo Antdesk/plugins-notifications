@@ -9,6 +9,10 @@ module Notifications
     autoload :Helpers, 'notifications/mailers/helpers'
   end
 
+  # Constants which holds devise configuration for extensions. Those should
+  # not be modified by the "end user" (this is why they are constants).
+  ALL         = []
+
   # Address which sends Notification e-mails.
   mattr_accessor :mailer_sender
   @@mailer_sender = nil
