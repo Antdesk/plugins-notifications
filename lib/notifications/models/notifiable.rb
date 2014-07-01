@@ -5,8 +5,8 @@ module Notifications
       extend ActiveSupport::Concern
 
       included do
-        class_attribute :devise_modules, instance_writer: false
-        self.devise_modules ||= []
+        class_attribute :notifications_modules, instance_writer: false
+        self.notifications_modules ||= []
 
       end
 

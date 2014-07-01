@@ -40,4 +40,4 @@ module Notifications
 end
 
 require 'notifications/models/notifiable'
-require 'notifications/models/creatable'
+require 'notifications/models/create'
