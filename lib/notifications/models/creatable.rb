@@ -11,7 +11,7 @@ module Devise
     #   User.find(1).confirmed?    # true/false
     #   User.find(1).send_confirmation_instructions # manually send instructions
     #
-    module Create
+    module Creatable
       extend ActiveSupport::Concern
       include ActionView::Helpers::DateHelper
 
