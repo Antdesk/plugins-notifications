@@ -1,6 +1,7 @@
 require 'rails'
 require 'active_support/dependencies'
-
+require 'orm_adapter'
+require 'set'
 
 module Notifications
 

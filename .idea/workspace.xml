@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="notifications.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="notifications.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="1332">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="22" />
+            <state vertical-scroll-proportion="-0.57228917" vertical-offset="686" max-vertical-offset="1350">
+              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="notifiable.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="notifiable.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/notifications/models/notifiable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14263074" vertical-offset="0" max-vertical-offset="5022">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state vertical-scroll-proportion="-2.7272727" vertical-offset="0" max-vertical-offset="5022">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,8 +121,8 @@
         <option value="$PROJECT_DIR$/lib/generators/notifications/install_generator.rb" />
         <option value="$PROJECT_DIR$/lib/notifications/model/notifiable.rb" />
         <option value="$PROJECT_DIR$/lib/notifications/orm/active_record.rb" />
-        <option value="$PROJECT_DIR$/lib/notifications.rb" />
         <option value="$PROJECT_DIR$/lib/notifications/models/notifiable.rb" />
+        <option value="$PROJECT_DIR$/lib/notifications.rb" />
       </list>
     </option>
   </component>
@@ -532,18 +532,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
+    <entry file="file://$PROJECT_DIR$/lib/notifications/models/notifiable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="1332">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="22" />
+        <state vertical-scroll-proportion="-2.7272727" vertical-offset="0" max-vertical-offset="5022">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/notifications/models/notifiable.rb">
+    <entry file="file://$PROJECT_DIR$/lib/notifications.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14263074" vertical-offset="0" max-vertical-offset="5022">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state vertical-scroll-proportion="-0.57228917" vertical-offset="686" max-vertical-offset="1350">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding />
         </state>
       </provider>
