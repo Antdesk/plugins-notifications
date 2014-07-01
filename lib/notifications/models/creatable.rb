@@ -1,4 +1,4 @@
-module Devise
+module Notifications
   module Models
     # Confirmable is responsible to verify if an account is already confirmed to
     # sign in, and to send emails with confirmation instructions.
