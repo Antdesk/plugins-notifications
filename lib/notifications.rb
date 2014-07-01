@@ -65,3 +65,5 @@ module Notifications
   self.mailer = "Devise::Mailer"
 
 end
+
+require 'devise/models'
