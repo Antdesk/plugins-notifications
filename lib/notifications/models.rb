@@ -38,3 +38,4 @@ module Notifications
   end
 end
 
+require 'notifications/models/notifiable'
