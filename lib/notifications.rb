@@ -66,4 +66,4 @@ module Notifications
 
 end
 
-require 'devise/models'
+require 'notifications/models'
