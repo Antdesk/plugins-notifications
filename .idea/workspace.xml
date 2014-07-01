@@ -32,20 +32,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/notifications/models.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="864">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.509434" vertical-offset="0" max-vertical-offset="882">
+              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creatable.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="creatable.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/notifications/models/creatable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40298507" vertical-offset="45" max-vertical-offset="918">
+            <state vertical-scroll-proportion="-7.3636365" vertical-offset="45" max-vertical-offset="918">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/lib/notifications/models/notifiable.rb" />
         <option value="$PROJECT_DIR$/lib/notifications.rb" />
         <option value="$PROJECT_DIR$/lib/notifications/models/create.rb" />
-        <option value="$PROJECT_DIR$/lib/notifications/models.rb" />
         <option value="$PROJECT_DIR$/lib/notifications/models/creatable.rb" />
+        <option value="$PROJECT_DIR$/lib/notifications/models.rb" />
       </list>
     </option>
   </component>
@@ -571,18 +571,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/notifications/models.rb">
+    <entry file="file://$PROJECT_DIR$/lib/notifications/models/creatable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="864">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        <state vertical-scroll-proportion="-7.3636365" vertical-offset="45" max-vertical-offset="918">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/notifications/models/creatable.rb">
+    <entry file="file://$PROJECT_DIR$/lib/notifications/models.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40298507" vertical-offset="45" max-vertical-offset="918">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.509434" vertical-offset="0" max-vertical-offset="882">
+          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
           <folding />
         </state>
       </provider>

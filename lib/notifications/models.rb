@@ -14,9 +14,10 @@ module Notifications
 
       notifications_modules_hook! do
         include Notifications::Models::Notifiable
+        ActiveSupport::Deprecation.warn "after include notifiable!"
         selected_modules.each do |m|
           mod = Notifications::Models.const_get(m.to_s.classify)
-
+          ActiveSupport::Deprecation.warn "after mod = #{mod}!"
           if mod.const_defined?("ClassMethods")
             class_mod = mod.const_get("ClassMethods")
             extend class_mod
