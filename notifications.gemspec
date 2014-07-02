@@ -14,8 +14,10 @@ Gem::Specification.new do |s|
   s.description = "Notifications system for Rails with Observer"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  #s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files         = `git ls-files`.split("\n")
   s.test_files = Dir["test/**/*"]
+  s.require_paths = ["lib"]
 
   s.add_dependency "rails", "~> 4.1.1"
   s.add_dependency("orm_adapter", "~> 0.1")
