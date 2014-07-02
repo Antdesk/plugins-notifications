@@ -69,7 +69,36 @@ module Notifications
   end
   self.mailer = "Notifications::Mailer"
 
+  # == Options:
+  #
+  #   +model+      - String representing the load path to a custom *model* for this module (to autoload.)
+  #   +controller+ - Symbol representing the name of an existing or custom *controller* for this module.
+  #   +route+      - Symbol representing the named *route* helper for this module.
+  #
+  # All values, except :model, accept also a boolean and will have the same name as the given module
+  # name.
+  #
+  # == Examples:
+  #
+  #   Notifications.add_module(:party_module)
+  #   Notifications.add_module(:party_module, controller: :sessions)
+  #   Notifications.add_module(:party_module, model: 'party_module/model')
+  #
+  def self.add_module(module_name, options = {})
+    ALL << module_name
+    options.assert_valid_keys(:model)
+
+    if options[:model]
+      path = (options[:model] == true ? "devise/models/#{module_name}" : options[:model])
+      camelized = ActiveSupport::Inflector.camelize(module_name.to_s)
+      Notifications::Models.send(:autoload, camelized.to_sym, path)
+    end
+
+    Notifications::Mapping.add_module module_name
+  end
+
 end
 
+require 'notifications/mapping'
 require 'notifications/models'
 require 'notifications/modules'
