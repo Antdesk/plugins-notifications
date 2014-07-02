@@ -67,7 +67,7 @@ module Notifications
   def self.mailer=(class_name)
     @@mailer_ref = ref(class_name)
   end
-  self.mailer = "Notifications::Mailer"
+  self.mailer = "Devise::Mailer"
 
   # == Options:
   #
