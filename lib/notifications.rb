@@ -72,3 +72,4 @@ module Notifications
 end
 
 require 'notifications/models'
+require 'notifications/modules'
