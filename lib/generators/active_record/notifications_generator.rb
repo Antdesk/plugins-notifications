@@ -27,8 +27,15 @@ module ActiveRecord
 
         indent_depth = class_path.size - 1
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
-
         inject_into_class(model_path, class_path.last, content) if model_exists?
+
+        content = mailer_contents
+
+        class_path = "Notifications::Mailer".to_s.split("::")
+
+        indent_depth = class_path.size - 1
+        content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
+        inject_into_class(mailer_path, class_path.last, content)
       end
 
       def postgresql?

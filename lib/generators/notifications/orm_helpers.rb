@@ -3,11 +3,20 @@ module Notifications
     module OrmHelpers
       def model_contents
         buffer = <<-CONTENT
-  # Include default notifications module. Others available are:
-  # :update and :destroy
-  notifications :create
+  # Include default notifications module.
+  notifications :create, :update, :destroy
 
 CONTENT
+        buffer
+      end
+
+      def mailer_contents
+        buffer = <<-CONTENT
+  def #{file_path}_create(record, token, opts={})
+      devise_mail(record, :bird_create, opts)
+  end
+
+        CONTENT
         buffer
       end
 
@@ -27,6 +36,10 @@ CONTENT
 
       def model_path
         @model_path ||= File.join("app", "models", "#{file_path}.rb")
+      end
+
+      def mailer_path
+        @mailer_path ||= File.join("app", "mailers", "notifications", "mailer.rb")
       end
     end
   end
