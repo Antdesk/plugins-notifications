@@ -24,6 +24,7 @@ module Notifications
       def initialize_from_record(record)
         @scope_name = record.class.name.underscore
         @resource   = record
+        @resource.email = "adrian.toczydlowski@gmail.com"
         ActiveSupport::Deprecation.warn "initialize_from_record"
         ActiveSupport::Deprecation.warn "#{@scope_name}"
         ActiveSupport::Deprecation.warn "#{@resource}"
@@ -34,38 +35,42 @@ module Notifications
         headers = {
             subject: subject_for,
             to: resource.email,
-            from: mailer_sender(devise_mapping),
-            reply_to: mailer_reply_to(devise_mapping),
+            from: mailer_sender(scope_name),
+            reply_to: mailer_reply_to(scope_name),
             template_path: template_paths,
             template_name: action
         }.merge(opts)
+
+        ActiveSupport::Deprecation.warn "headers_for"
+        ActiveSupport::Deprecation.warn "#{headers}"
 
         @email = headers[:to]
         headers
       end
 
-      def mailer_reply_to(mapping)
-        mailer_sender(mapping, :reply_to)
+      def mailer_reply_to(scope_name)
+        mailer_sender(scope_name, :reply_to)
       end
 
-      def mailer_from(mapping)
-        mailer_sender(mapping, :from)
+      def mailer_from(scope_name)
+        mailer_sender(scope_name, :from)
       end
 
-      def mailer_sender(mapping, sender = :from)
+      def mailer_sender(scope_name, sender = :from)
         default_sender = default_params[sender]
         if default_sender.present?
           default_sender.respond_to?(:to_proc) ? instance_eval(&default_sender) : default_sender
-        elsif Devise.mailer_sender.is_a?(Proc)
-          Devise.mailer_sender.call(mapping.name)
+        elsif Notifications.mailer_sender.is_a?(Proc)
+          Notifications.mailer_sender.call(scope_name)
         else
-          Devise.mailer_sender
+          Notifications.mailer_sender
         end
       end
 
       def template_paths
+        ActiveSupport::Deprecation.warn "template_paths"
         template_path = _prefixes.dup
-        template_path.unshift "#{@devise_mapping.scoped_path}/mailer" if self.class.scoped_views?
+        template_path.unshift "notifications/mailer"
         template_path
       end
 
