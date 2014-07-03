@@ -1,6 +1,5 @@
 require 'rails'
 require 'active_support/dependencies'
-require 'active_support/inflector'
 require 'orm_adapter'
 require 'set'
 

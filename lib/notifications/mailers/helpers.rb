@@ -1,3 +1,5 @@
+require 'active_support/inflector/inflections'
+
 module Notifications
   module Mailers
     module Helpers
