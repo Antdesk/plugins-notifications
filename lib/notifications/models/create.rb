@@ -16,7 +16,7 @@ module Notifications
       include ActionView::Helpers::DateHelper
 
       included do
-        after_create  :send_on_create_confirmation_instructions
+        after_create  :send_on_create_instructions
       end
 
       def initialize(*args, &block)
@@ -24,11 +24,11 @@ module Notifications
       end
 
       # Send confirmation instructions by email
-      def send_confirmation_instructions
+      def send_create_instructions
 
-        ActiveSupport::Deprecation.warn "send_confirmation_instructions"
+        ActiveSupport::Deprecation.warn "send_create_instructions"
         opts =  { }
-        send_devise_notification(:confirmation_instructions, opts)
+        send_devise_notification(:create, opts)
       end
 
       protected
@@ -36,8 +36,8 @@ module Notifications
       # A callback method used to deliver confirmation
       # instructions on creation. This can be overridden
       # in models to map to a nice sign up e-mail.
-      def send_on_create_confirmation_instructions
-        send_confirmation_instructions
+      def send_on_create_instructions
+        send_create_instructions
       end
 
     end

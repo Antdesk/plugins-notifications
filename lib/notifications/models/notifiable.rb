@@ -1,3 +1,5 @@
+require 'active_support/inflector/inflections'
+
 module Notifications
   module Models
     # Notifiable module. Holds common settings for notifications.
@@ -22,6 +24,9 @@ module Notifications
         ActiveSupport::Deprecation.warn "send_devise_notification"
         ActiveSupport::Deprecation.warn "#{notification}"
         ActiveSupport::Deprecation.warn "#{self}"
+        ActiveSupport::Deprecation.warn "po zmianach"
+        method = self.class.name.underscore + "_#{notification}"
+        ActiveSupport::Deprecation.warn "#{method}"
         tmp = *args
         ActiveSupport::Deprecation.warn "#{tmp}"
         notifications_mailer.send(notification, self, *args).deliver
