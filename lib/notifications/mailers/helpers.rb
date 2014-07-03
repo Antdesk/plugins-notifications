@@ -93,7 +93,7 @@ module Notifications
       #
       def subject_for
         ActiveSupport::Deprecation.warn "subject_for"
-        I18n.t(:"subject", scope: [:devise, :mailer],
+        I18n.t(:"subject", scope: [:notifications, :mailer],
                default: [:subject])
       end
     end
