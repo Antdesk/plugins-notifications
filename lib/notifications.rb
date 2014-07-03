@@ -29,6 +29,12 @@ module Notifications
   mattr_accessor :parent_mailer
   @@parent_mailer = "ActionMailer::Base"
 
+  # PRIVATE CONFIGURATION
+
+  # Store scopes mappings.
+  mattr_reader :mappings
+  @@mappings = ActiveSupport::OrderedHash.new
+
   # Default way to setup Notification. Run rails generate notifications_install to create
   # a fresh initializer with all configuration values.
   def self.setup

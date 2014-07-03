@@ -14,9 +14,9 @@ module Notifications
       when String, Symbol
         return obj
       when Class
-        Devise.mappings.each_value { |m| return m.name if obj <= m.to }
+        Notifications.mappings.each_value { |m| return m.name if obj <= m.to }
       else
-        Devise.mappings.each_value { |m| return m.name if obj.is_a?(m.to) }
+        Notifications.mappings.each_value { |m| return m.name if obj.is_a?(m.to) }
       end
 
       raise "Could not find a valid mapping for #{obj.inspect}"
@@ -33,12 +33,12 @@ module Notifications
       @singular = (options[:singular] || @scoped_path.tr('/', '_').singularize).to_sym
 
       @class_name = (options[:class_name] || name.to_s.classify).to_s
-      @klass = Devise.ref(@class_name)
+      @klass = Notifications.ref(@class_name)
 
       @path = (options[:path] || name).to_s
       @path_prefix = options[:path_prefix]
 
-      @sign_out_via = options[:sign_out_via] || Devise.sign_out_via
+      @sign_out_via = options[:sign_out_via] || Notifications.sign_out_via
       @format = options[:format]
 
       @router_name = options[:router_name]
