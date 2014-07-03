@@ -26,10 +26,11 @@ module Notifications
         ActiveSupport::Deprecation.warn "#{self}"
         ActiveSupport::Deprecation.warn "po zmianach"
         method = self.class.name.underscore + "_#{notification}"
+        method = method.to_sym
         ActiveSupport::Deprecation.warn "#{method}"
         tmp = *args
         ActiveSupport::Deprecation.warn "#{tmp}"
-        notifications_mailer.send(notification, self, *args).deliver
+        notifications_mailer.send(method, self, *args).deliver
       end
 
     end
