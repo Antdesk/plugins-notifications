@@ -102,3 +102,4 @@ end
 require 'notifications/mapping'
 require 'notifications/models'
 require 'notifications/modules'
+require 'notifications/mailer'
