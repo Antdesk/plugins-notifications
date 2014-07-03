@@ -9,13 +9,13 @@ module ActiveRecord
       include Notifications::Generators::OrmHelpers
       #source_root File.expand_path("../templates", __FILE__)
 
+=begin
       def generate_model
         invoke "active_record:model", [name], migration: false unless model_exists? && behavior == :invoke
       end
+=end
 
       def inject_notifications_content
-
-
 
         content = model_contents
 

@@ -6,7 +6,7 @@ module Notifications
       include Rails::Generators::ResourceHelpers
 
       namespace "notifications"
-      source_root File.expand_path("../templates", __FILE__)
+      #source_root File.expand_path("../templates", __FILE__)
 
       desc "Edit a model with the given NAME (if one does exist) with notifications " <<
            "configuration."
