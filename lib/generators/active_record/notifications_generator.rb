@@ -7,13 +7,16 @@ module ActiveRecord
       argument :attributes, type: :array, default: [], banner: "field:type field:type"
 
       include Notifications::Generators::OrmHelpers
-      source_root File.expand_path("../templates", __FILE__)
+      #source_root File.expand_path("../templates", __FILE__)
 
       def generate_model
         invoke "active_record:model", [name], migration: false unless model_exists? && behavior == :invoke
       end
 
-      def inject_devise_content
+      def inject_notifications_content
+
+
+
         content = model_contents
 
         class_path = if namespaced?
