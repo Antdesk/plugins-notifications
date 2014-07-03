@@ -20,18 +20,20 @@ module Notifications
       end
 
       def initialize_from_record(record)
-        @scope_name = Notifications::Mapping.find_scope!(record)
+        @scope_name = record.class.name
         @resource   = instance_variable_set("@#{devise_mapping.name}", record)
         ActiveSupport::Deprecation.warn "initialize_from_record"
         ActiveSupport::Deprecation.warn "#{@scope_name}"
         ActiveSupport::Deprecation.warn "#{@resource}"
       end
 
+=begin
       def devise_mapping
         @devise_mapping ||= Notifications.mappings[scope_name]
         ActiveSupport::Deprecation.warn "devise_mapping"
         ActiveSupport::Deprecation.warn "#{@devise_mapping}"
       end
+=end
 
       def headers_for(action, opts)
         headers = {
