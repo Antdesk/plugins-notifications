@@ -22,8 +22,8 @@ module Notifications
       end
 
       def initialize_from_record(record)
-        @scope_name = record.class.name
-        @resource   = record.underscore
+        @scope_name = record.class.name.underscore
+        @resource   = record
         ActiveSupport::Deprecation.warn "initialize_from_record"
         ActiveSupport::Deprecation.warn "#{@scope_name}"
         ActiveSupport::Deprecation.warn "#{@resource}"
