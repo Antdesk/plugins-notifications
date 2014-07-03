@@ -12,6 +12,10 @@ module Notifications
         template "notifications.rb", "config/initializers/notifications.rb"
       end
 
+      def copy_mailer
+        template "mailer.rb", "app/mailers/notifications/mailer.rb"
+      end
+
       def copy_locale
         copy_file "../../../config/locales/en.yml", "config/locales/notifications.en.yml"
       end

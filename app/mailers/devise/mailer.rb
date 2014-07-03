@@ -1,3 +1,0 @@
-if defined?(ActionMailer)
-
-end
