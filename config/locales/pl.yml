@@ -1,0 +1,4 @@
+pl:
+  notifications:
+    mailer:
+      subject: "Powiadomienie"

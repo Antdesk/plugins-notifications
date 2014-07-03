@@ -21,23 +21,16 @@ module Notifications
 
       def initialize_from_record(record)
         @scope_name = record.class.name
-        @resource   = record
+        @resource   = record.underscore
         ActiveSupport::Deprecation.warn "initialize_from_record"
         ActiveSupport::Deprecation.warn "#{@scope_name}"
         ActiveSupport::Deprecation.warn "#{@resource}"
       end
 
-=begin
-      def devise_mapping
-        @devise_mapping ||= Notifications.mappings[scope_name]
-        ActiveSupport::Deprecation.warn "devise_mapping"
-        ActiveSupport::Deprecation.warn "#{@devise_mapping}"
-      end
-=end
-
       def headers_for(action, opts)
+        ActiveSupport::Deprecation.warn "headers_for"
         headers = {
-            subject: subject_for(action),
+            subject: subject_for,
             to: resource.email,
             from: mailer_sender(devise_mapping),
             reply_to: mailer_reply_to(devise_mapping),
@@ -91,9 +84,10 @@ module Notifications
       #         confirmation_instructions:
       #           subject: '...'
       #
-      def subject_for(key)
-        I18n.t(:"#{devise_mapping.name}_subject", scope: [:devise, :mailer, key],
-               default: [:subject, key.to_s.humanize])
+      def subject_for
+        ActiveSupport::Deprecation.warn "subject_for"
+        I18n.t(:"subject", scope: [:devise, :mailer],
+               default: [:subject])
       end
     end
   end

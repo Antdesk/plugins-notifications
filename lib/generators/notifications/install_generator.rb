@@ -18,6 +18,7 @@ module Notifications
 
       def copy_locale
         copy_file "../../../config/locales/en.yml", "config/locales/notifications.en.yml"
+        copy_file "../../../config/locales/pl.yml", "config/locales/notifications.pl.yml"
       end
 
       def rails_4?
