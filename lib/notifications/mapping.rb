@@ -9,7 +9,7 @@ module Notifications
     # Receives an object and find a scope for it. If a scope cannot be found,
     # raises an error. If a symbol is given, it's considered to be the scope.
     def self.find_scope!(obj)
-      ActiveSupport::Deprecation.warn "find scope #{obj} #{obj.name} #{obj.to} "
+      ActiveSupport::Deprecation.warn "find scope #{obj} #{obj.name}"
       case obj
       when String, Symbol
         return obj
