@@ -39,7 +39,7 @@ CONTENT
       end
 
       def mailer_path
-        @mailer_path ||= File.join("app", "mailers", "notifications", "mailer.rb")
+        @mailer_path ||= "app/mailers/notifications/mailer.rb"
       end
     end
   end

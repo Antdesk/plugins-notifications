@@ -17,10 +17,7 @@ module ActiveRecord
 
       def inject_notifications_content
 
-        #content = model_contents
-
-
-
+        content = model_contents
 
         class_path = if namespaced?
           class_name.to_s.split("::")
@@ -28,18 +25,19 @@ module ActiveRecord
           [class_name]
         end
 
-
         indent_depth = class_path.size - 1
+=begin
         raise <<-ERROR
 class_path #{class_path} class_name #{class_name} model_path #{model_path} class_path.last #{class_path.last} indent_depth #{indent_depth}.
 
         ERROR
+=end
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
         inject_into_class(model_path, class_path.last, content) if model_exists?
 
         content = mailer_contents
 
-        class_path = "Notifications::Mailer".to_s.split("::")
+        class_path = "Mailer"
 
         indent_depth = class_path.size - 1
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
