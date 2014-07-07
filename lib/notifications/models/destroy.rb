@@ -5,7 +5,7 @@ module Notifications
       include ActionView::Helpers::DateHelper
 
       included do
-        after_destroy :send_on_destroy_instructions
+        before_destroy :send_on_destroy_instructions
       end
 
       def initialize(*args, &block)
