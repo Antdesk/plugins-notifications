@@ -17,7 +17,10 @@ module ActiveRecord
 
       def inject_notifications_content
 
-        content = model_contents
+        #content = model_contents
+
+        content = class_path + "\n class_name " + class_name.to_s.split("::") + "\n"
+
 
         class_path = if namespaced?
           class_name.to_s.split("::")
