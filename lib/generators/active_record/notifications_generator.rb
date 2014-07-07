@@ -19,8 +19,7 @@ module ActiveRecord
 
         #content = model_contents
 
-        content = class_path.to_s + "\n class_name " + class_path.last + "\n"
-
+        content = (class_path.size - 1).to_s + "\n class_name " + class_path.last + "\n"
 
         class_path = if namespaced?
           class_name.to_s.split("::")
