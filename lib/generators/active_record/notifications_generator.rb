@@ -21,6 +21,12 @@ module ActiveRecord
 
         content = (class_path.size - 1).to_s + "\n class_name " + class_path.last + "\n"
 
+        raise <<-ERROR
+class_path #{class_path} class_name #{class_name}.
+
+ERROR
+
+
         class_path = if namespaced?
           class_name.to_s.split("::")
         else
