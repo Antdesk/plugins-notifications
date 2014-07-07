@@ -19,8 +19,6 @@ module ActiveRecord
 
         #content = model_contents
 
-        content = (class_path.size - 1).to_s + "\n class_name " + class_path.last + "\n"
-
         raise <<-ERROR
 class_path #{class_path} class_name #{class_name}.
 
