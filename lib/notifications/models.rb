@@ -40,4 +40,8 @@ module Notifications
 end
 
 require 'notifications/models/notifiable'
+=begin
 require 'notifications/models/create'
+require 'notifications/models/update'
+require 'notifications/models/destroy'
+=end
