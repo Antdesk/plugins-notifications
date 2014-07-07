@@ -55,8 +55,8 @@
       <file leaf-file-name="notifications_generator.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/generators/active_record/notifications_generator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28915662" vertical-offset="162" max-vertical-offset="990">
-              <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.36144578" vertical-offset="162" max-vertical-offset="990">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -928,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/generators/active_record/notifications_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28915662" vertical-offset="162" max-vertical-offset="990">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.36144578" vertical-offset="162" max-vertical-offset="990">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding />
         </state>
       </provider>
