@@ -35,7 +35,7 @@ class_path #{class_path} class_name #{class_name} model_path #{model_path} class
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
         inject_into_class(model_path, class_path.last, content) if model_exists?
 
-        inject_into_file 'mailer.rb', after: "#extend\n" do <<-'RUBY'
+        inject_into_file 'app/mailers/notifications/mailer.rb', after: "#extend\n" do <<-'RUBY'
   puts "Hello World"
         RUBY
         end
