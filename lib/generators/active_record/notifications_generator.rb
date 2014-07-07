@@ -19,10 +19,7 @@ module ActiveRecord
 
         #content = model_contents
 
-        raise <<-ERROR
-class_path #{class_path} class_name #{class_name}.
 
-ERROR
 
 
         class_path = if namespaced?
@@ -31,7 +28,12 @@ ERROR
           [class_name]
         end
 
+
         indent_depth = class_path.size - 1
+        raise <<-ERROR
+class_path #{class_path} class_name #{class_name} model_path #{model_path} class_path.last #{class_path.last} indent_depth #{indent_depth}.
+
+        ERROR
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
         inject_into_class(model_path, class_path.last, content) if model_exists?
 
