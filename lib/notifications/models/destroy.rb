@@ -1,11 +1,11 @@
 module Notifications
   module Models
-    module Create
+    module Destroy
       extend ActiveSupport::Concern
       include ActionView::Helpers::DateHelper
 
       included do
-        after_create  :send_on_create_instructions
+        after_destroy :send_on_destroy_instructions
       end
 
       def initialize(*args, &block)
@@ -13,19 +13,19 @@ module Notifications
       end
 
       # Send confirmation instructions by email
-      def send_create_instructions
+      def send_destroy_instructions
 
-        ActiveSupport::Deprecation.warn "send_create_instructions"
+        ActiveSupport::Deprecation.warn "send_destroy_instructions"
         opts =  { }
-        send_devise_notification(:create, opts)
+        send_devise_notification(:destroy, opts)
       end
 
       protected
 
       # A callback method used to deliver
       # instructions on creation.
-      def send_on_create_instructions
-        send_create_instructions
+      def send_on_destroy_instructions
+        send_destroy_instructions
       end
 
     end
