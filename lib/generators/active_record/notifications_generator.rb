@@ -39,12 +39,9 @@ class_path #{class_path} class_name #{class_name} model_path #{model_path} class
 
         class_path = "Mailer"
 
-        indent_depth = class_path.size - 1
+        indent_depth = 2
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
-        raise <<-ERROR
-mailer_path #{mailer_path} class_path.last #{class_path.last} content #{content} indent_depth #{indent_depth}.
 
-        ERROR
         inject_into_class(mailer_path, class_path.last, content)
       end
 
