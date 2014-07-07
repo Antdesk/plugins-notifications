@@ -35,7 +35,8 @@ class_path #{class_path} class_name #{class_name} model_path #{model_path} class
         content = content.split("\n").map { |line| "  " * indent_depth + line } .join("\n") << "\n"
         inject_into_class(model_path, class_path.last, content) if model_exists?
 
-        inject_into_file 'app/mailers/notifications/mailer.rb', after: "#extend\n" do <<-CONTENT
+        inject_into_file 'app/mailers/notifications/mailer.rb', after: "#extend" do <<-CONTENT
+
 Notifications::Mailer.class_eval do
   def #{file_path}_create(record, token, opts={})
       devise_mail(record, :#{file_path}_create, opts)
