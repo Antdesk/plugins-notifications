@@ -7,7 +7,7 @@ module ActiveRecord
       argument :attributes, type: :array, default: [], banner: "field:type field:type"
 
       include Notifications::Generators::OrmHelpers
-      #source_root File.expand_path("../templates", __FILE__)
+      source_root File.expand_path("../templates", __FILE__)
 
 =begin
       def generate_model
@@ -38,11 +38,23 @@ class_path #{class_path} class_name #{class_name} model_path #{model_path} class
         inject_into_file 'app/mailers/notifications/mailer.rb', after: "#extend\n" do <<-CONTENT
 Notifications::Mailer.class_eval do
   def #{file_path}_create(record, token, opts={})
-      devise_mail(record, :bird_create, opts)
+      devise_mail(record, :#{file_path}_create, opts)
+  end
+  def #{file_path}_update(record, token, opts={})
+      devise_mail(record, :#{file_path}_update, opts)
+  end
+  def #{file_path}_destroy(record, token, opts={})
+      devise_mail(record, :#{file_path}_destroy, opts)
   end
 end
         CONTENT
         end
+      end
+
+      def copy_views
+        template "template_mail.html.erb", "app/views/notifications/mailer/#{file_path}_create.html.erb"
+        template "template_mail.html.erb", "app/views/notifications/mailer/#{file_path}_update.html.erb"
+        template "template_mail.html.erb", "app/views/notifications/mailer/#{file_path}_destroy.html.erb"
       end
 
       def postgresql?
