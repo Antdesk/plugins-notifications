@@ -18,3 +18,4 @@ if defined?(ActionMailer)
     end
   end
 end
+#extend
