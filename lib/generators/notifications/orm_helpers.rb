@@ -12,11 +12,11 @@ CONTENT
 
       def mailer_contents
         buffer = <<-CONTENT
-  def #{file_path}_create(record, token, opts={})
+    def #{file_path}_create(record, token, opts={})
       devise_mail(record, :bird_create, opts)
-  end
+    end
 
-        CONTENT
+CONTENT
         buffer
       end
 
