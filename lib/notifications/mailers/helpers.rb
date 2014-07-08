@@ -23,9 +23,15 @@ module Notifications
       end
 
       def initialize_from_record(record)
-        @scope_name = record.class.name.underscore
-        @resource   = record
-        @resource.email = "adrian.toczydlowski@gmail.com"
+        if record.is_a?(Class)
+          @scope_name = record.class.name.underscore
+          @resource   = record
+          @resource.email = "adrian.toczydlowski@gmail.com"
+        else
+          @scope_name = record.controller_name.classify.underscore
+          @resource   = record.controller_name.classify
+          @resource.email = "adrian.toczydlowski@gmail.com"
+        end
         ActiveSupport::Deprecation.warn "initialize_from_record"
         ActiveSupport::Deprecation.warn "#{@scope_name}"
         ActiveSupport::Deprecation.warn "#{@resource}"

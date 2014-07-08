@@ -48,7 +48,7 @@ module Notifications
         ActiveSupport::Deprecation.warn "#{tmp}"
         if tmp != {}
           ActiveSupport::Deprecation.warn "tmp rozne {} #{tmp} is_a? #{self.is_a?(Class)}"
-          notifications_mailer.send(notification, self.controller_name.classify, tmp).deliver
+          notifications_mailer.send(notification, self, tmp).deliver
         else
 
           notifications_mailer.send(method, self, *args).deliver
