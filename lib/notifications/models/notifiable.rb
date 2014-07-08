@@ -47,8 +47,8 @@ module Notifications
         tmp = *args
         ActiveSupport::Deprecation.warn "#{tmp}"
         if tmp != {}
-          ActiveSupport::Deprecation.warn "tmp rozne {}"
-          notifications_mailer.send(notification, self, *args).deliver
+          ActiveSupport::Deprecation.warn "tmp rozne {} #{tmp}"
+          notifications_mailer.send(notification, self, tmp).deliver
         else
 
           notifications_mailer.send(method, self, *args).deliver
