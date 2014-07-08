@@ -29,7 +29,7 @@ module Notifications
           @resource.email = "adrian.toczydlowski@gmail.com"
         else
           @scope_name = record.controller_name.classify.underscore
-          @resource   = record.controller_name.classify
+          @resource   = record.controller_name.classify.constantize
           @resource.email = "adrian.toczydlowski@gmail.com"
         end
         ActiveSupport::Deprecation.warn "initialize_from_record"
