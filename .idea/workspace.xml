@@ -35,8 +35,8 @@
       <file leaf-file-name="notifiable.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/notifications/models/notifiable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6509434" vertical-offset="432" max-vertical-offset="1206">
-              <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.8207547" vertical-offset="432" max-vertical-offset="1206">
+              <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -887,8 +887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/notifications/models/notifiable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6509434" vertical-offset="432" max-vertical-offset="1206">
-          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.8207547" vertical-offset="432" max-vertical-offset="1206">
+          <caret line="53" column="64" selection-start-line="53" selection-start-column="64" selection-end-line="53" selection-end-column="64" />
           <folding />
         </state>
       </provider>
