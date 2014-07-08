@@ -1,10 +1,12 @@
 require 'active_support/inflector/inflections'
+require 'active_support/callbacks'
 
 module Notifications
   module Models
     # Notifiable module. Holds common settings for notifications.
     module Notifiable
       extend ActiveSupport::Concern
+      include ActiveSupport::Callbacks
 
       define_callbacks :custom_callback
 
