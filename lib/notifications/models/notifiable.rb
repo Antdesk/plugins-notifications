@@ -6,16 +6,14 @@ module Notifications
     # Notifiable module. Holds common settings for notifications.
     module Notifiable
       extend ActiveSupport::Concern
-      include ActiveSupport::Callbacks
-
-      define_callbacks :custom_callback
-
-      set_callback :custom_callback, :after, :custom
 
       included do
         class_attribute :notifications_modules, instance_writer: false
         self.notifications_modules ||= []
+        include ActiveSupport::Callbacks
+        define_callbacks :custom_callback
 
+        set_callback :custom_callback, :after, :custom
       end
 
       protected
