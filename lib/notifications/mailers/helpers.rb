@@ -15,8 +15,11 @@ module Notifications
       # Configure default email options
       def devise_mail(record, action, opts={})
         ActiveSupport::Deprecation.warn "Devise mail"
+=begin
         ActiveSupport::Deprecation.warn "#{record}"
         ActiveSupport::Deprecation.warn "#{action}"
+=end
+        ActiveSupport::Deprecation.warn "#{opts}"
         initialize_from_record(record)
         mail headers_for(action, opts)
       end
